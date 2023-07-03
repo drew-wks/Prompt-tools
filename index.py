@@ -20,7 +20,7 @@ def main():
 def run_python_script(text):
     # Your Python script logic here
     # Perform any desired operations with the submitted text
-    return text.upper()
+    return text()
 
 if __name__ == '__main__':
     main()
