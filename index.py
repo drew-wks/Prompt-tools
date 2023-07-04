@@ -5,11 +5,10 @@ openai.api_key = "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"  # sets m
 
 st.title ("Prompt POC")
 def main():
-    st.title("This is where the prompt will go")
 
     # Create a form
     with st.form("my_form"):
-        text_input = st.text_input("Enter Text:")
+        text_input = st.text_input("Enter your prompt here:")
         submit_button = st.form_submit_button("Submit")
 
         # When the submit button is clicked
