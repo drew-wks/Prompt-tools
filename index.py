@@ -17,10 +17,6 @@ def main():
             result = run_python_script(text_input)
             st.write(f"Result: {result}")
 
-def run_python_script(text):
-    # Your Python script logic here
-    # Perform any desired operations with the submitted text
-    return text()
 
 if __name__ == '__main__':
     main()
