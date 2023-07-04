@@ -18,7 +18,7 @@ def main():
     st.title ("Prompt POC")
     
      # Create a form
-     with st.form("my_form"):
+    with st.form("my_form"):
         text_input = st.text_input("Enter your prompt here:")
         submit_button = st.form_submit_button("Submit")
     
