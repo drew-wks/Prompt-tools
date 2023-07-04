@@ -3,7 +3,7 @@ import openai
 
 openai.api_key = "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"  # sets my api key
 
-st.title ("Python WebApp")
+st.title ("Prompt POC")
 def main():
     st.title("This is where the prompt will go")
 
