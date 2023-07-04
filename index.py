@@ -30,7 +30,7 @@ def main():
     if submit_button:
              # Run your Python script with the submitted text
             response = get_completion(prompt)
-            st.write(f"Result: {response}")
+            st.write(f"Response: {response}")
 
 
 
