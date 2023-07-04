@@ -18,15 +18,22 @@ def main():
     
      # Create a form
     with st.form("my_form"):
-        text_input = st.text_input("Enter your prompt here:")
+        prompt = st.text_input("Write clear and specific instructions here:")
         submit_button = st.form_submit_button("Submit")
-    
+
+    # the three quotation marks are a delimiter. They set
+text = f""" 
+This is the text to pass to openai.
+"""
+
     # When the submit button is clicked
     if submit_button:
              # Run your Python script with the submitted text
-            result = run_python_script(text_input)
-            st.write(f"Result: {result}")
-    
+            response = get_completion(prompt)
+            st.write(f"Result: {response}")
+
+
+
 
 if __name__ == '__main__':
     main()
