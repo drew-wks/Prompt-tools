@@ -22,9 +22,9 @@ def main():
         submit_button = st.form_submit_button("Submit")
 
     # the three quotation marks are a delimiter. They set
-text = f""" 
-This is the text to pass to openai.
-"""
+    text = f""" 
+    This is the text to pass to openai.
+    """
 
     # When the submit button is clicked
     if submit_button:
