@@ -1,7 +1,7 @@
 import streamlit as st
 import openai
 
-openai.api_key = "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"  # sets my api key
+openai.api_key = "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"  # sets my api key
 
 st.title ("Python WebApp")
 def main():
