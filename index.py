@@ -3,8 +3,8 @@ import openai
 
 openai.api_key = "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"  # sets my api key
 
-st.title ("Prompt POC")
 def main():
+    st.title ("Prompt POC")
 
     # Create a form
     with st.form("my_form"):
