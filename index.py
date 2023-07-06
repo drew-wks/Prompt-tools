@@ -24,7 +24,7 @@ def main():
 
     # the three quotation marks are a delimiter. They set
     text = f""" 
-    This is the text to pass to openai. ```{text}```
+    This is the text to pass to openai.```{text}```
     """
 
     # When the submit button is clicked
@@ -32,7 +32,6 @@ def main():
              # Run your Python script with the submitted text
             response = get_completion(prompt)
             st.write(f"Response: {response}")
-            st.write(prompt, text)
 
 
 
