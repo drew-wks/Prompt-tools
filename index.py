@@ -33,16 +33,7 @@ def main():
              # Run your Python script with the submitted text
             response = get_completion(prompt)
            
-            st.markdown("""
-                <style type="text/css">
-                div[data-testid="stHorizontalBlock"] {
-                    border:10px;
-                    padding:30px;
-                    border-radius: 10px;
-                    background:#FFFFFF;
-                }
-                </style>
-            """, unsafe_allow_html=True)
+    with st.spinner(text="This may take a moment..."):
             
             st.write(f"GPT 3.5 turbo Response: {response}")
             
