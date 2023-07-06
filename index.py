@@ -20,7 +20,9 @@ def main():
 
     with st.form("my_form"):
         instruction = st.text_input("Write clear and specific instructions here:")
-        prompt = f{instruction}```{text}```
+        prompt = f"""
+        {instruction}```{text}```
+        """
         submit_button = st.form_submit_button("Submit")
 
     text = f""" 
