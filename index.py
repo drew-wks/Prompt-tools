@@ -16,7 +16,9 @@ def main():
         
     st.title ("Prompt POC")
     
-     # Create a form
+     # Create a prompt form 
+    # somehow this string must be appended to the end of the instructions: ```{text}```
+
     with st.form("my_form"):
         prompt = st.text_input("Write clear and specific instructions here:")
         submit_button = st.form_submit_button("Submit")
@@ -31,7 +33,7 @@ def main():
              # Run your Python script with the submitted text
             response = get_completion(prompt)
             st.write(f"Response: {response}")
-
+            st.write(prompt, text)
 
 
 
