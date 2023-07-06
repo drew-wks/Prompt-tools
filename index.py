@@ -34,7 +34,7 @@ def main():
             response = get_completion(prompt)
            
             st.text_area(label ="",value=response, height =100)
-            st.write(f"GPT 3.5 turbo Response: {response}")
+           # st.write(f"GPT 3.5 turbo Response: {response}")
             
 
 
