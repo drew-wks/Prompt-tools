@@ -17,6 +17,9 @@ def main():
     st.title ("Prompt POC")
     
      # Create a prompt form 
+    '''Right now, the issue I think is that the st.text_input function can't take anything between it an the submit button? 
+    as a result the prompt lines are mucking up the thing. That being said, I need them so must figure out how the st.text_imput can
+    accept an entire string assed to it'''
 
     with st.form("my_form"):
         instruction = st.text_input("Write clear and specific instructions here:")
