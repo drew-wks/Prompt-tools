@@ -19,12 +19,12 @@ def main():
      # Create a prompt form 
 
     with st.form("my_form"):
-        prompt = st.text_input("Write clear and specific instructions here:")
+        instruction = st.text_input("Write clear and specific instructions here:")
+        prompt = f{instruction}```{text}```
         submit_button = st.form_submit_button("Submit")
 
-    # the three quotation marks are a delimiter. They set
     text = f""" 
-    This is the text to pass to openai.```{text}```
+    This is the text to pass to openai.
     """
 
     # When the submit button is clicked
