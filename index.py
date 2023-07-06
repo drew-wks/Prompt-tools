@@ -17,7 +17,6 @@ def main():
     st.title ("Prompt POC")
     
      # Create a prompt form 
-    # somehow this string must be appended to the end of the instructions: ```{text}```
 
     with st.form("my_form"):
         prompt = st.text_input("Write clear and specific instructions here:")
@@ -25,7 +24,7 @@ def main():
 
     # the three quotation marks are a delimiter. They set
     text = f""" 
-    This is the text to pass to openai.
+    This is the text to pass to openai. ```{text}```
     """
 
     # When the submit button is clicked
