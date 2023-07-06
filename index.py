@@ -32,8 +32,19 @@ def main():
     if submit_button:
              # Run your Python script with the submitted text
             response = get_completion(prompt)
-           # st.write(f"Text: {text}")
-            st.write(f"GPT 3.5 turbo Response 🤖: {response}")
+           
+            st.markdown("""
+                <style type="text/css">
+                div[data-testid="stHorizontalBlock"] {
+                    border:10px;
+                    padding:30px;
+                    border-radius: 10px;
+                    background:#FFFFFF;
+                }
+                </style>
+            """, unsafe_allow_html=True)
+            
+            st.write(f"GPT 3.5 turbo Response: {response}")
             
 
 
