@@ -20,7 +20,7 @@ def main():
     with st.form("my_form"):
         # Input widgets
         instruction = st.text_input("Write clear and specific instructions here:")    
-        text = st.text_input("Write clear and specific instructions here:") 
+        text = st.text_input("Write optional text here:") 
         submit_button = st.form_submit_button("Submit")
 
        
