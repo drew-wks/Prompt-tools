@@ -36,17 +36,17 @@ def main():
             st.text_area(label ="",value=response, height =100)
            # st.write(f"GPT 3.5 turbo Response: {response}")
             
-'''
-# Streamlit emoji shortcodes
-
-Below are all the emoji shortcodes supported by Streamlit.
-
-Shortcodes are a way to enter emojis using pure ASCII. So you can type this `:smile:` to show this
-:smile:.
-
-(Keep in mind you can also enter emojis directly as Unicode in your Python strings too — you don't
-*have to* use a shortcode)
-'''
+        '''
+        # Streamlit emoji shortcodes
+        
+        Below are all the emoji shortcodes supported by Streamlit.
+        
+        Shortcodes are a way to enter emojis using pure ASCII. So you can type this `:smile:` to show this
+        :smile:.
+        
+        (Keep in mind you can also enter emojis directly as Unicode in your Python strings too — you don't
+        *have to* use a shortcode)
+        '''
 
 if __name__ == '__main__':
     main()
