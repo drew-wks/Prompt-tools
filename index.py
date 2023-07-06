@@ -21,6 +21,7 @@ def main():
         # Input widgets
         instruction = st.text_input("Write clear and specific instructions here:")    
         text = st.text_input("Write optional text here:") 
+        st.text_area("better input box:")
         submit_button = st.form_submit_button("Submit")
 
        
