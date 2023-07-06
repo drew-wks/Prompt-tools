@@ -33,8 +33,7 @@ def main():
              # Run your Python script with the submitted text
             response = get_completion(prompt)
            
-            st.spinner(text="This may take a moment..."):
-            
+            st.spinner(text="This may take a moment...")
             st.write(f"GPT 3.5 turbo Response: {response}")
             
 
