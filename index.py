@@ -28,7 +28,11 @@ def main():
     text = f""" 
     This is the text to pass to openai.
     """
-
+       
+    prompt = f"""
+        {instruction}```{text}```
+        """
+    
     # When the submit button is clicked
     if submit_button:
              # Run your Python script with the submitted text
