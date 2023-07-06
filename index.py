@@ -34,8 +34,6 @@ def main():
             response = get_completion(prompt)
 
             '''
-            # Streamlit emoji shortcodes
-            
             ChatGPT response
             '''
         
