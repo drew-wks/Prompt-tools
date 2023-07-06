@@ -33,8 +33,7 @@ def main():
              # Run your Python script with the submitted text
             response = get_completion(prompt)
            # st.write(f"Text: {text}")
-            st.write(f"Prompt: {prompt}")
-            st.write(f"GPT 3.5 turbo Response: {response}")
+            st.write(f"GPT 3.5 turbo Response 🤖: {response}")
             
 
 
