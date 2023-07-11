@@ -35,7 +35,7 @@ def main():
         
             # st.write(f"**Response:** {response}")
             # st.write(f"**GPT Response:** {response}")
-            st.code(response, language="None", line_numbers=False)
+            st.code(response, language="asciidoc", line_numbers=False)
             
 
 
