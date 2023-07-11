@@ -19,7 +19,7 @@ def main():
     
     with st.form("my_form"):
         # Input widgets
-        model = st.selectbox("Select a model:", ("gpt-3.5-turbo", "gpt-4.0")
+        model = st.selectbox("Select a model:", ("gpt-3.5-turbo", "gpt-4.0"))
         instruction = st.text_area("Place instructions here:")    
         text = st.text_area("Place optional text here:") 
         submit_button = st.form_submit_button("Submit")
