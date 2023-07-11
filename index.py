@@ -6,9 +6,8 @@ openai.api_key = "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"  # sets m
 def main():
 
     # get_completion is a helper function. It takes in a prompt and return a completion for that prompt
-    def get_completion(prompt, model=model):
+    def get_completion(prompt, model):
         response = openai.ChatCompletion.create(
-            model=model,
             messages=[{"role": "user", "content": prompt}],
             temperature=0,  # this is the degree of randomness of the model's output
         )
