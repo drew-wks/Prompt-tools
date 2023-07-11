@@ -19,7 +19,7 @@ def main():
     
     with st.form("my_form"):
         # Input widgets
-        instruction = st.text_input("Place instructions here:")    
+        instruction = st.text_area("Place instructions here:")    
         text = st.text_area("Place optional text here:") 
         submit_button = st.form_submit_button("Submit")
 
