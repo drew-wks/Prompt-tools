@@ -6,7 +6,7 @@ openai.api_key = "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"  # sets m
 def main():
 
     # get_completion is a helper function. It takes in a prompt and return a completion for that prompt
-    def get_completion(prompt, model="gpt-3.5-turbo"):
+    def get_completion(prompt, model=model):
         response = openai.ChatCompletion.create(
             model=model,
             messages=[{"role": "user", "content": prompt}],
@@ -19,6 +19,7 @@ def main():
     
     with st.form("my_form"):
         # Input widgets
+        model = st.selectbox("Select a model:", ("gpt-3.5-turbo", "gpt-4.0")
         instruction = st.text_area("Place instructions here:")    
         text = st.text_area("Place optional text here:") 
         submit_button = st.form_submit_button("Submit")
