@@ -33,8 +33,8 @@ def main():
              # Run your Python script with the submitted text
             response = get_completion(prompt)
         
-            st.text_area(label ="Chat GPT response",value=response)
-           # st.write(f"GPT 3.5 turbo Response: {response}")
+            st.write(response)
+           # st.write(f"**GPT Response:** {response}")
             
 
 
