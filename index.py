@@ -33,8 +33,9 @@ def main():
              # Run your Python script with the submitted text
             response = get_completion(prompt)
         
-            st.write(response)
+            st.write(f"**Response:** {response}")
            # st.write(f"**GPT Response:** {response}")
+           # st.code(body, language="python", line_numbers=False)
             
 
 
