@@ -42,8 +42,8 @@ def main():
              # Run your Python script with the submitted text
             response = get_completion(prompt)
         
-            # st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
-            st.code(response, language="asciidoc", line_numbers=False)
+            st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
+            # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap!
             
 
 
