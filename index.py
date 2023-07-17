@@ -1,17 +1,15 @@
 
 import openai
+import streamlit as st
 
 openai.api_key = "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"  # sets my api key
 
-'''
-at some point I wil ltransition to this as a more secure way of accessing my openai key. It may require a package called os to be imported first.
-from dotenv import load_dotenv, find_dotenv
-_ = load_dotenv(find_dotenv()) # read a local .env file which contains my secret key
+# at some point I wil ltransition to this as a more secure way of accessing my openai key. It may require a package called os to be imported first.
+# from dotenv import load_dotenv, find_dotenv
+# _ = load_dotenv(find_dotenv()) # read a local .env file which contains my secret key
 
 openai.api_key  = os.environ['OPENAI_API_KEY']
-'''
 
-import streamlit as st
 
 def main():
 
