@@ -1,4 +1,4 @@
-import streamlit as st
+
 import openai
 
 openai.api_key = "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"  # sets my api key
@@ -10,6 +10,8 @@ _ = load_dotenv(find_dotenv()) # read a local .env file which contains my secret
 
 openai.api_key  = os.environ['OPENAI_API_KEY']
 '''
+
+import streamlit as st
 
 def main():
 
