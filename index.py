@@ -8,7 +8,7 @@ openai.api_key = "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"  # sets m
 # from dotenv import load_dotenv, find_dotenv
 # _ = load_dotenv(find_dotenv()) # read a local .env file which contains my secret key
 
-openai.api_key  = os.environ['OPENAI_API_KEY']
+# openai.api_key  = os.environ['OPENAI_API_KEY']
 
 
 def main():
