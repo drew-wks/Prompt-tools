@@ -1,5 +1,6 @@
 
 import openai
+import bardapi
 import streamlit as st
 
 openai.api_key = "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"  # sets my api key
