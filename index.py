@@ -22,7 +22,8 @@ def main():
         return response.choices[0].message["content"]
         
     st.title ("Prompt POC")
-    st.write ("This form is good for situations where you would like Chat GPT to perform a task upon text supplied by you. By separating the text from the instruction, you can get better results. Try it!") 
+    st.write ("This form is good for situations where you would like Chat GPT to perform a task upon text supplied by you. By separating the text from the instruction, you can get better results.")
+    st.write ("Give it a try!")
     
     with st.form("my_form"):
         # Input widgets
