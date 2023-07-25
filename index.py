@@ -23,7 +23,7 @@ def main():
         
     st.title ("AI Prompt Tool")
     st.write ("We developed this proof of concept for situations where you would like Chat GPT to perform a task upon text supplied by you. By separating the text from the instruction, you can get better results.")
-    st.write ("Give it a try!")
+    st.write ("Go head, give it a try!")
     
     with st.form("my_form"):
         # Input widgets
