@@ -34,6 +34,7 @@ def main():
     # When the submit button is clicked
     if submit_button:
              # Run your Python script with the submitted text
+            global response
             response = get_completion(prompt)
         
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
@@ -58,7 +59,6 @@ def main():
     with st.form("round2"):
         # Input widgets
         instruction = st.text_area("Place instructions here:")    
-        #text = response
         submit_button = st.form_submit_button("Submit")
     
     prompt = f"""
