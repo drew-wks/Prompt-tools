@@ -41,6 +41,8 @@ def main():
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
             # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
 
+            st.write ("Session State value is",  st.session_state['previous_response'])
+
             collector = FeedbackCollector(
                 component_name="default",
                 email=st.secrets["TRUBRICS_EMAIL"], # Store your Trubrics credentials in st.secrets:
