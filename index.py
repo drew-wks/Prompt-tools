@@ -44,6 +44,11 @@ def main():
         
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
             # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap!
+
+    from trubrics.integrations.streamlit import FeedbackCollector
+
+    collector = FeedbackCollector()
+    collector.st_feedback(feedback_type="issue")
             
 
 
