@@ -34,7 +34,7 @@ def main():
     # When the submit button is clicked
     if submit_button:
              # Run your Python script with the submitted text
-            global response
+            # global response
             response = get_completion(prompt)
         
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
