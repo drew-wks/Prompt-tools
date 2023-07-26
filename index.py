@@ -55,7 +55,7 @@ def main():
             )
 #round two       
   
-with st.form("round2"):
+    with st.form("round2"):
         # Input widgets
         instruction = st.text_area("Place instructions here:")    
         text = response
