@@ -27,6 +27,7 @@ def main():
         text = st.text_area("Place optional text here:") 
         submit_button = st.form_submit_button("Submit")
 
+    print("model")
     
     prompt = f"""
         {instruction}```{text}```
