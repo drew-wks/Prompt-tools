@@ -13,7 +13,7 @@ def main():
             messages=[{"role": "user", "content": prompt}],
             temperature=0,  # this is the degree of randomness of the model's output
         )
-        return response_full.choices[0].message["content"]
+        return response.choices[0].message["content"]
 
     
     st.title ("AI Prompt Tool")
@@ -34,7 +34,6 @@ def main():
     # When the submit button is clicked
     if submit_button1:
              # Run your Python script with the submitted text
-            global response
             response = get_completion(prompt)
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
             # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
