@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 from trubrics.integrations.streamlit import FeedbackCollector
 
-openai.api_key = "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"  # sets my api key
+openai.api_key = st.secrets["OPENAI_API_KEY"]  # sets my api key by pulling it from the streamlit secrets file
 
 # at some point I wil ltransition to this as a more secure way of accessing my openai key. It may require a package called os to be imported first.
 # from dotenv import load_dotenv, find_dotenv
