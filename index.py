@@ -56,25 +56,25 @@ def main():
             )
 #round two       
   
-    with st.form("round2"):
-        # Input widgets
-        instruction = st.text_area("Place instructions here:")    
-        submit_button = st.form_submit_button("Submit")
-        st.write ("DEBUG2")
-        
-    
-    # When the submit button is clicked
-    if submit_button:
-             # Run your Python script with the submitted text
+            with st.form("round2"):
+                # Input widgets
+                instruction = st.text_area("Place instructions here:")    
+                submit_button2 = st.form_submit_button("Submit")
+                st.write ("DEBUG2")
+                
             
-            prompt = f"""
-                {instruction}```{response}```
-                """
-            
-            response = get_completion(prompt)
-            st.write ("DEBUG3")
-            st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
-            # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
+            # When the submit button is clicked
+            if submit_button2:
+                     # Run your Python script with the submitted text
+                    
+                    prompt = f"""
+                        {instruction}```{response}```
+                        """
+                    
+                    response = get_completion(prompt)
+                    st.write ("DEBUG3")
+                    st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
+                    # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
             
 if __name__ == '__main__':
     main()
