@@ -1,5 +1,6 @@
 import openai
 import streamlit as st
+from trubrics.integrations.streamlit import FeedbackCollector
 
 openai.api_key = "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"  # sets my api key
 
@@ -43,12 +44,10 @@ def main():
             response = get_completion(prompt)
         
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
-            # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap!
+            # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
 
-        from trubrics.integrations.streamlit import FeedbackCollector
-
-        collector = FeedbackCollector()
-        collector.st_feedback(feedback_type="issue")
+            collector = FeedbackCollector()
+            collector.st_feedback(feedback_type="issue")
             
 
 
