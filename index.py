@@ -54,23 +54,23 @@ def main():
             )
 #round two       
   
-            with st.form("round2"):
-                # Input widgets
-                instruction = st.text_area("Place instructions here:")    
-                submit_button2 = st.form_submit_button("Submit")
+    with st.form("round2"):
+        # Input widgets
+        instruction = st.text_area("Place instructions here:")    
+        submit_button2 = st.form_submit_button("Submit")
 
-                           
-            prompt = f"""
-                {instruction}```{response}```
-                """
+                   
+    prompt = f"""
+        {instruction}```{response}```
+        """
+    
+    # When the submit button is clicked
+    if submit_button2:
+             # Run your Python script with the submitted text
+
             
-            # When the submit button is clicked
-            if submit_button2:
-                     # Run your Python script with the submitted text
- 
-                    
-                    response = get_completion(prompt)
-                    st.write(f"**Response:** {response}") 
+            response = get_completion(prompt)
+            st.write(f"**Response:** {response}") 
             
 if __name__ == '__main__':
     main()
