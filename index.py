@@ -46,7 +46,12 @@ def main():
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
             # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
 
-            collector = FeedbackCollector()
+            collector = FeedbackCollector(
+                component_name="default",
+                email=st.secrets["TRUBRICS_EMAIL"], # Store your Trubrics credentials in st.secrets:
+                password=st.secrets["TRUBRICS_PASSWORD"], # https://blog.streamlit.io/secrets-in-sharing-apps/
+            )
+
             collector.st_feedback(feedback_type="issue")
             
 
