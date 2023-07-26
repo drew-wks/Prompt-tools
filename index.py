@@ -6,8 +6,6 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]  # sets my api key by pulling it f
 
 
 def main():
-    global response
-    response = "Andrew thinks this is a string"
     # get_completion is a helper function. It takes in a prompt and return a completion for that prompt
     def get_completion(prompt):
         response = openai.ChatCompletion.create(
@@ -35,6 +33,7 @@ def main():
     # When the submit button is clicked
     if submit_button:
              # Run your Python script with the submitted text
+            global response
             response = get_completion(prompt)
             st.write ("DEBUG")
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
@@ -56,25 +55,23 @@ def main():
             )
 #round two       
   
-            with st.form("round2"):
-                # Input widgets
-                instruction = st.text_area("Place instructions here:")    
-                submit_button2 = st.form_submit_button("Submit")
-                st.write ("DEBUG2")
-                
+    with st.form("round2"):
+        # Input widgets
+        instruction = st.text_area("Place instructions here:")    
+        submit_button = st.form_submit_button("Submit")
+        
+    
+    # When the submit button is clicked
+    if submit_button:
+             # Run your Python script with the submitted text
             
-            # When the submit button is clicked
-            if submit_button2:
-                     # Run your Python script with the submitted text
-                    
-                    prompt = f"""
-                        {instruction}```{response}```
-                        """
-                    
-                    response = get_completion(prompt)
-                    st.write ("DEBUG3")
-                    st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
-                    # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
+            prompt = f"""
+                {instruction}```{response}```
+                """
+            
+            response2 = get_completion(prompt)
+            st.write(f"**Response:** {response2}") # this works. I just prefer the st.code model with copy 2 clipboard
+            # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
             
 if __name__ == '__main__':
     main()
