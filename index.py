@@ -13,7 +13,7 @@ def main():
             messages=[{"role": "user", "content": prompt}],
             temperature=0,  # this is the degree of randomness of the model's output
         )
-        return response.choices[0].message["content"]
+        return response_full.choices[0].message["content"]
 
     
     st.title ("AI Prompt Tool")
