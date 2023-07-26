@@ -34,7 +34,7 @@ def main():
     # When the submit button is clicked
     if submit_button:
              # Run your Python script with the submitted text
-            # global response
+            global response
             response = get_completion(prompt)
             st.write ("DEBUG")
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
@@ -62,13 +62,15 @@ def main():
         submit_button = st.form_submit_button("Submit")
         st.write ("DEBUG2")
         
-    prompt = f"""
-        {instruction}```{response}```
-        """
     
     # When the submit button is clicked
     if submit_button:
              # Run your Python script with the submitted text
+            
+            prompt = f"""
+                {instruction}```{response}```
+                """
+            
             response = get_completion(prompt)
             st.write ("DEBUG3")
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
