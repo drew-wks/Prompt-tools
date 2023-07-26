@@ -56,7 +56,7 @@ def main():
                 open_feedback_label="[Optional] How did the model do?",
             )
 #round two       
-  
+
     with st.form("round2"):
         # Input widgets
         instruction = st.text_area("Place instructions here:")    
@@ -74,6 +74,8 @@ def main():
             
             response = get_completion(prompt)
             st.write(f"**Response:** {response}") 
+
+            st.write ("Session State value is",  st.session_state['previous_response'])
             
 if __name__ == '__main__':
     main()
