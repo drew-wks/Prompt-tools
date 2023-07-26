@@ -54,6 +54,7 @@ def main():
 
             collector.st_feedback(feedback_type="thumbs",
                 model=model,
+                open_feedback_label="[Optional] How did the model do?",
             )
             
 
