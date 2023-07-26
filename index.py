@@ -8,13 +8,12 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]  # sets my api key by pulling it f
 def main():
     # get_completion is a helper function. It takes in a prompt and return a completion for that prompt
     def get_completion(prompt):
-        response = openai.ChatCompletion.create(
+        response_full = openai.ChatCompletion.create(
             model=model,
             messages=[{"role": "user", "content": prompt}],
             temperature=0,  # this is the degree of randomness of the model's output
         )
-        round1_response = response.choices[0].message["content"]
-        return round1_response
+        return response.choices[0].message["content"]
 
     
     st.title ("AI Prompt Tool")
@@ -36,7 +35,7 @@ def main():
     if submit_button1:
              # Run your Python script with the submitted text
             response = get_completion(prompt)
-            st.write(f"**Response:** {round1_response}") # this works. I just prefer the st.code model with copy 2 clipboard
+            st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
             # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
 
             collector = FeedbackCollector(
@@ -69,8 +68,8 @@ def main():
                 {instruction}```{response}```
                 """
             
-            response2 = get_completion(prompt)
-            st.write(f"**Response:** {response2}") 
+            response = get_completion(prompt)
+            st.write(f"**Response:** {response}") 
             
 if __name__ == '__main__':
     main()
