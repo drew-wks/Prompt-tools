@@ -64,7 +64,7 @@ def main():
 
                    
     prompt = f"""
-        {instruction}```{response}```
+        {instruction}```{st.session_state['previous_response']}```
         """
     
     # When the submit button is clicked
