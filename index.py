@@ -58,15 +58,16 @@ def main():
                 # Input widgets
                 instruction = st.text_area("Place instructions here:")    
                 submit_button2 = st.form_submit_button("Submit")
-                
+
+                           
+            prompt = f"""
+                {instruction}```{response}```
+                """
             
             # When the submit button is clicked
             if submit_button2:
                      # Run your Python script with the submitted text
-                    
-                    prompt = f"""
-                        {instruction}```{response}```
-                        """
+ 
                     
                     response = get_completion(prompt)
                     st.write(f"**Response:** {response}") 
