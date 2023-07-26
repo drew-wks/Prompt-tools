@@ -52,6 +52,7 @@ def main():
                 password=st.secrets["TRUBRICS_PASSWORD"], # https://blog.streamlit.io/secrets-in-sharing-apps/
             )
 
+            st.markdown("""---""")
             st.write ("How well did the model do?")
 
             collector.st_feedback(feedback_type="thumbs",
