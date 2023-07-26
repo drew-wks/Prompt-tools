@@ -13,7 +13,8 @@ def main():
             messages=[{"role": "user", "content": prompt}],
             temperature=0,  # this is the degree of randomness of the model's output
         )
-        return response.choices[0].message["content"]
+        round1_response = response.choices[0].message["content"]
+        return round1_response
 
     
     st.title ("AI Prompt Tool")
@@ -35,7 +36,7 @@ def main():
     if submit_button1:
              # Run your Python script with the submitted text
             response = get_completion(prompt)
-            st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
+            st.write(f"**Response:** {round1_response}") # this works. I just prefer the st.code model with copy 2 clipboard
             # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
 
             collector = FeedbackCollector(
@@ -69,8 +70,7 @@ def main():
                 """
             
             response2 = get_completion(prompt)
-            st.write(f"**Response:** {response2}") # this works. I just prefer the st.code model with copy 2 clipboard
-            # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
+            st.write(f"**Response:** {response2}") 
             
 if __name__ == '__main__':
     main()
