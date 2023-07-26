@@ -20,7 +20,7 @@ def main():
     st.write ("We developed this proof of concept for situations where you would like Chat GPT to perform a task upon text supplied by you. By separating the text from the instruction, you can get better results.")
     st.write ("Go ahead, give it a try!")
     
-    with st.form("my_form"):
+    with st.form("round1"):
         # Input widgets
         model = st.selectbox("Select a model:", ("gpt-3.5-turbo", "text-davinci-003")) # this works it's just not needed right now
         instruction = st.text_area("Place instructions here:")    
