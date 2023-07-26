@@ -52,7 +52,9 @@ def main():
                 password=st.secrets["TRUBRICS_PASSWORD"], # https://blog.streamlit.io/secrets-in-sharing-apps/
             )
 
-            collector.st_feedback(feedback_type="issue")
+            collector.st_feedback(feedback_type="issue",
+                model=model,
+            )
             
 
 
