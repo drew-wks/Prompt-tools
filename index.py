@@ -26,8 +26,6 @@ def main():
         instruction = st.text_area("Place instructions here:")    
         text = st.text_area("Place optional text here:") 
         submit_button = st.form_submit_button("Submit")
-
-    print("model")
     
     prompt = f"""
         {instruction}```{text}```
@@ -49,6 +47,7 @@ def main():
 
             st.markdown("""---""")
             st.write ("How well did the model do?")
+            st.write (f"{model}")
 
             collector.st_feedback(feedback_type="thumbs",
                 model=model,
