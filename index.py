@@ -6,7 +6,8 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]  # sets my api key by pulling it f
 
 
 def main():
-
+    global response
+    response = "Andrew thinks this is a string"
     # get_completion is a helper function. It takes in a prompt and return a completion for that prompt
     def get_completion(prompt):
         response = openai.ChatCompletion.create(
@@ -34,7 +35,6 @@ def main():
     # When the submit button is clicked
     if submit_button:
              # Run your Python script with the submitted text
-            global response
             response = get_completion(prompt)
             st.write ("DEBUG")
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
