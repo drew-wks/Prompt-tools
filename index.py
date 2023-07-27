@@ -31,10 +31,9 @@ def main():
     prompt = f"""
         {instruction}```{text}```
         """
-     
-    # When the submit button is clicked
+
+    
     if submit_button1:
-             # Run your Python script with the submitted text
             response = get_completion(prompt)
             st.session_state['previous_response'] = response
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
@@ -66,16 +65,23 @@ def main():
     prompt = f"""
         {instruction}```{st.session_state['previous_response']}```
         """
-    
-    # When the submit button is clicked
-    if submit_button2:
-             # Run your Python script with the submitted text
 
-            
+    
+    if submit_button2:         
             response = get_completion(prompt)
             st.write(f"**New Response:** {response}") 
 
-            st.write ("Original response",  st.session_state['previous_response'])
+            st.write (f"**Original response:**",  st.session_state['previous_response'])
+ )
+
+            st.markdown("""---""")
+            st.write ("How well did the model do?")
+            st.write (f"{model}")
+
+            collector.st_feedback(feedback_type="thumbs",
+                model=model,
+                open_feedback_label="[Optional] How did the model do?",
+            )
             
 if __name__ == '__main__':
     main()
