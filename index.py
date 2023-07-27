@@ -16,6 +16,13 @@ def main():
         )
         return response.choices[0].message["content"]
 
+
+    collector = FeedbackCollector(
+        component_name="default",
+        email=st.secrets["TRUBRICS_EMAIL"], # Retreives my Trubrics credentials from secrets file
+        password=st.secrets["TRUBRICS_PASSWORD"], # https://blog.streamlit.io/secrets-in-sharing-apps/
+    )
+    
     
     st.title ("AI Prompt Tool")
     st.write ("We developed this proof of concept for situations where you would like Chat GPT to perform a task upon text supplied by you. By separating the text from the instruction, you can get better results.")
@@ -39,12 +46,6 @@ def main():
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
             # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
 
-
-            collector = FeedbackCollector(
-                component_name="default",
-                email=st.secrets["TRUBRICS_EMAIL"], # Retreives my Trubrics credentials from secrets file
-                password=st.secrets["TRUBRICS_PASSWORD"], # https://blog.streamlit.io/secrets-in-sharing-apps/
-            )
 
             st.markdown("""---""")
             st.write ("How well did the model do?")
