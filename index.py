@@ -4,7 +4,6 @@ from trubrics.integrations.streamlit import FeedbackCollector
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]  # sets my api key by pulling it from the streamlit secrets file
 
-st.session_state['previous_response'] = 0
 
 
 def main():
