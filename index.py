@@ -70,9 +70,7 @@ def main():
     if submit_button2:         
             response = get_completion(prompt)
             st.write(f"**New Response:** {response}") 
-
             st.write (f"**Original response:**",  st.session_state['previous_response'])
- )
 
             st.markdown("""---""")
             st.write ("How well did the model do?")
