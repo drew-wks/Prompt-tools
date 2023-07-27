@@ -74,9 +74,9 @@ def main():
 
             
             response = get_completion(prompt)
-            st.write(f"**Response:** {response}") 
+            st.write(f"**New Response:** {response}") 
 
-            st.write ("Session State value is",  st.session_state['previous_response'])
+            st.write ("Original response",  st.session_state['previous_response'])
             
 if __name__ == '__main__':
     main()
