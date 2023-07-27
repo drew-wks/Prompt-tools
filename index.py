@@ -7,7 +7,7 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]  # sets my api key by pulling it f
 st.session_state['previous_response'] = 0
 
 
-def main():
+#def main():
     # get_completion is a helper function. It takes in a prompt and return a completion for that prompt
     def get_completion(prompt):
         response = openai.ChatCompletion.create(
@@ -79,5 +79,5 @@ def main():
 
             st.write ("Session State value is",  st.session_state['previous_response'])
             
-if __name__ == '__main__':
-    main()
+#if __name__ == '__main__':
+#    main()
