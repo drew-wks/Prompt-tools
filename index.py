@@ -37,7 +37,7 @@ def main():
     if submit_button1:
              # Run your Python script with the submitted text
             response = get_completion(prompt)
-            st.session_state['previous_response'] = response
+            st.session_state['previous_response'] = f"{response}"
             st.write(f"**Response:** {response}") # this works. I just prefer the st.code model with copy 2 clipboard
             # st.code(response, language="asciidoc", line_numbers=False) #has copy function but no word wrap! 
 
@@ -45,7 +45,7 @@ def main():
 
             collector = FeedbackCollector(
                 component_name="default",
-                email=st.secrets["TRUBRICS_EMAIL"], # Store your Trubrics credentials in st.secrets:
+                email=st.secrets["TRUBRICS_EMAIL"], # Retreives my Trubrics credentials from secrets file
                 password=st.secrets["TRUBRICS_PASSWORD"], # https://blog.streamlit.io/secrets-in-sharing-apps/
             )
 
