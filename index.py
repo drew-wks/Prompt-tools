@@ -55,32 +55,6 @@ def main():
                 model=model,
                 open_feedback_label="[Optional] How did the model do?",
             )
-#round two       
-
-    with st.form("round2"):
-        # Input widgets
-        instruction = st.text_area("Place instructions here:")    
-        submit_button2 = st.form_submit_button("Submit")
-
-                   
-    prompt = f"""
-        {instruction}```{st.session_state['previous_response']}```
-        """
-
-    
-    if submit_button2:         
-            response = get_completion(prompt)
-            st.write(f"**New Response:** {response}") 
-            st.write (f"**Original response:**",  st.session_state['previous_response'])
-
-            st.markdown("""---""")
-            st.write ("How well did the model do?")
-            st.write (f"{model}")
-
-            collector.st_feedback(feedback_type="thumbs",
-                model=model,
-                open_feedback_label="[Optional] How did the model do?",
-            )
             
 if __name__ == '__main__':
     main()
