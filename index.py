@@ -30,7 +30,7 @@ def main():
     
     with st.form("round1"):
         # Input widgets
-        model = st.selectbox("Select a model:", ("gpt-3.5-turbo", "text-davinci-003")) # this works it's just not needed right now
+        model = st.selectbox("Select a model:", ("gpt-3.5-turbo", "gpt-4")) # this works it's just not needed right now
         instruction = st.text_area("Place instructions here:")    
         text = st.text_area("Place optional text here:") 
         submit_button1 = st.form_submit_button("Submit")
