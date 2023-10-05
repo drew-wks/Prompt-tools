@@ -19,7 +19,9 @@ This is usually manner in which you would like the instructions to be carried ou
 - This python code uses the openai.ChatCompletion API via the openai package. This was my first use of this package.  
 - It was also my first experience using Streamlit to enable this chatbot as a WebApp. For simplicity it does not maintain a chat history.  
 - Finally, it collects feedback via the trubrics integration using the folliowing code snippet:  
-```from trubrics.integrations.streamlit import FeedbackCollector```  
+```from trubrics.integrations.streamlit import FeedbackCollector```
+
+![image](https://github.com/dvvilkins/Webapp1/blob/cc9a70ad4b08fbe60ab828d732618f40017e40d4/UI_Chatv1.png)?raw=true)
 
 
 ## Updates  
