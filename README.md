@@ -1,6 +1,6 @@
 # AI Prompt Tool   
 
-| 🌐 This repo has since been replicated by OpenAI as the ChatGPT Custom Instructions feature. Visit it at [https://smith.langchain.com/hub](https://smith.langchain.com/hub](https://openai.com/blog/custom-instructions-for-chatgpt)) but its still fun to see how you can do it yourself in code 🌐 |
+| 🌐 This repo has since been replicated by OpenAI as the ChatGPT Custom Instructions feature. Visit it at [https://openai.com/blog/custom-instructions-for-chatgpt] but its still fun to see how you can do it yourself in code 🌐 |
 | --- |
 
 ## Introduction  
