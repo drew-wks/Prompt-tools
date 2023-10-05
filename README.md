@@ -1,6 +1,6 @@
 # AI Prompt Tool   
 
-| 🌐 This repo has since been replicated by OpenAI ChatGPT as its Custom Instructions feature. Visit it at [https://openai.com/blog/custom-instructions-for-chatgpt] but its still fun to see how you can do it yourself in code 🌐 |
+| 🌐 This repo has since been replicated by OpenAI ChatGPT as its Custom Instructions feature. Visit it at https://openai.com/blog/custom-instructions-for-chatgpt but its still fun to see how you can do it yourself in code 🌐 |
 | --- |
 
 ## Introduction  
