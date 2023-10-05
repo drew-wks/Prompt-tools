@@ -21,7 +21,7 @@ This is usually manner in which you would like the instructions to be carried ou
 - Finally, it collects feedback via the trubrics integration using the folliowing code snippet:  
 ```from trubrics.integrations.streamlit import FeedbackCollector```
   
-![image](https://github.com/dvvilkins/Webapp1/blob/1d6b407cee00e53d1a1895baec52192982f914b5/UI_Chatv1_.png)?raw=true)  
+![image](https://github.com/dvvilkins/Webapp1/blob/1d6b407cee00e53d1a1895baec52192982f914b5/UI_Chatv1_.png)?raw=true)   
 
 
 
