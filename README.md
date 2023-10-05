@@ -1,5 +1,8 @@
 # AI Prompt Tool   
 
+| 🌐 This repo has since been replicated by OpenAI as the ChatGPT Custom Instructions feature. Visit it at [https://smith.langchain.com/hub](https://smith.langchain.com/hub](https://openai.com/blog/custom-instructions-for-chatgpt)) but its still fun to see how you can do it yourself in code 🌐 |
+| --- |
+
 ## Introduction  
 This was a proof of concept that I launched publicly on July 3 2023 to build a more robust chat input using Open AI's Chat GPT chatcompletion API. The POC works by allowing the user to supply additional information, allowing them greater control over the manner in which the ChatGPT model performs task. With it, you can do things like provide brand guidelines, an ethics statements, or some other company policy that you wish to guide the model in its response.  Behind the scenes, the form generates a user and a system message, which is passes to ChatGPT via the openai.ChatCompletion API.
 
