@@ -16,10 +16,10 @@ This is usually the instruction you want to give to the LLM. An instruction coul
 This is usually manner in which you would like the instructions to be carried out. It could be a role you would like the chatbot to pay or it could be an example the chatbot can consider in crafting its response. For example, the role could be to write this sonnet using the language of Chief Seattle and to follow the structure of the lyrics in the Pixies Song "This Monkey's Gone to heaven". You could even supply the actual lyrics. This is called few-shot prompting and it can help the chatbot craft a better response.
 
 ## Technology and Features  
-This python code uses the openai.ChatCompletion API via the openai package. This was my first use of this package.
-It was also my first experience using Streamlit to enable this chatbot as a WebApp. For simplicity it does not maintain a chat history.
-Finally, it collects feedback via the Trubericks tool using the folliowing code snippet
-```from trubrics.integrations.streamlit import FeedbackCollector```
+- This python code uses the openai.ChatCompletion API via the openai package. This was my first use of this package.  
+- It was also my first experience using Streamlit to enable this chatbot as a WebApp. For simplicity it does not maintain a chat history.  
+- Finally, it collects feedback via the trubrics integration using the folliowing code snippet:  
+```from trubrics.integrations.streamlit import FeedbackCollector```  
 
 
 ## Updates  
