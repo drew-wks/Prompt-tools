@@ -18,6 +18,9 @@ This is usually manner in which you would like the instructions to be carried ou
 ## Technology and Features  
 This python code uses the openai.ChatCompletion API via the openai package. This was my first use of this package.
 It was also my first experience using Streamlit to enable this chatbot as a WebApp. For simplicity it does not maintain a chat history.
+Finally, it collects feedback via the Trubericks tool using the folliowing code snippet
+```from trubrics.integrations.streamlit import FeedbackCollector```
+
 
 ## Updates  
 I launched publicly on July 3 2023. The capability shown in this POC has since been incorporated by OpenAI into its ChatGPT Chat product as the Custom Instructions feature, but you can still access it here in its original conception. 
